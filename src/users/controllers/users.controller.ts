@@ -33,6 +33,11 @@ export class UsersController {
     return this.usersService.getOrderByUser(id);
   }
 
+  @Get('tasks')
+  getTasks() {
+    return this.usersService.getTasks();
+  }
+
   @Post()
   create(@Body() payload: CreateUserDto) {
     return this.usersService.create(payload);
